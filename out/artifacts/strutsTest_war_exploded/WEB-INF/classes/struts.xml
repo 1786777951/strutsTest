@@ -5,6 +5,11 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <!--设置编码-->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <!--设置上传文件最大值-->
+    <constant name="struts.multipart.maxSize" value="10240000"></constant>
+    
     <package name="basicstruts" extends="struts-default">
 
         <action name="index">
@@ -14,10 +19,18 @@
         <action name="showProduct" class="action.ProductAction" method="show">
             <result name="show">show.jsp</result>
         </action>
-
+        <!--添加-->
         <action name="addProduct" class="action.ProductAction" method="add">
             <result name="show">show.jsp</result>
         </action>
+        <!--上传-->
+        <action name="upload" class="action.UploadAction" method="upload">
+            <result name="success">success.jsp</result>
+        </action>
 
+        <!--struts标签-->
+        <action name="listProduct" class="action.ProductAction" method="list">
+            <result name="list">list.jsp</result>
+        </action>
     </package>
 </struts>

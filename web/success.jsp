@@ -2,17 +2,20 @@
   Created by IntelliJ IDEA.
   User: Exception
   Date: 2019/12/1
-  Time: 16:08
+  Time: 21:10
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page isELIgnored="false" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>上传成功后的网页</title>
 </head>
 <body>
-    ${product.name}
-    当前的用户名为:[${name}]
+    ${doc}
+    <br>
+    ${docFileName}
+    <br>
+    ${docContentType}
 </body>
 </html>
